@@ -89,3 +89,48 @@ document.getElementById('clear-btn').addEventListener('click', function (e) {
     e.preventDefault;
     document.getElementById('call-histories').innerText = '';
 });
+// copy button handler
+ // Copy to clipboard function
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+        // Success - do nothing extra
+    }).catch(err => {
+        console.error('Failed to copy: ', err);
+        // Fallback for older browsers
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        //document.execCommand("copy");
+        document.body.removeChild(textArea);
+    });
+}
+
+// Add event listeners to copy buttons
+const copyBtns = document.querySelectorAll('.copy-btn');
+for(let copyBtn of copyBtns){
+    copyBtn.addEventListener('click', function(e){
+        e.preventDefault();
+        
+        // Show alert
+        alert(`Number copied to clipboard! ${document.querySelector('.service-number').innerText}`);
+        
+        // Update copy count
+        const copyAmount = parseInt(document.getElementById('copy-count').innerText);
+        const updateCopyAmount = copyAmount + 1;
+        document.getElementById('copy-count').innerText = updateCopyAmount;
+        
+        // Copy service number to clipboard
+        const serviceNumber = document.querySelector('.service-number').innerText;
+        copyToClipboard(serviceNumber);
+        
+        // Visual feedback
+        this.classList.add('copied');
+        const originalHtml = this.innerHTML;
+        //this.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        setTimeout(() => {
+            this.innerHTML = originalHtml;
+            this.classList.remove('copied');
+        }, 2000);
+    });
+}
