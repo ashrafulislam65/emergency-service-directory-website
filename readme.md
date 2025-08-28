@@ -1,14 +1,7 @@
-## WELCOME TO ( সহজ সরল সিম্পল ) ASSIGNMENT-005
-
-### 📅 Deadline For 60 marks: 29th August, 2025 (11:59 pm ⏱️)
-
-### 📅 No Deadline For 50 marks
-
-### 📅 Deadline For 30 marks: Any time after 29th August.
 
 ---
 
-## ✅ Main Requirements (50 Marks)
+## ✅ Main Requirements 
 
 ### 1. Navbar
 
@@ -53,7 +46,7 @@ This Section will have layout as figma
 
 ### Emergency Hotline Section
 
-- **Show Minimum 6 cards**. Each card will contain:
+- **There are 9 cards**. Each card  contains:
   - Icon or Image
   - Relevant Name
   - Relevant Name in English
@@ -70,9 +63,9 @@ This Section will have layout as figma
 
 ---
 
-### 3. Responsiveness (5 Marks)
+### 3. Responsiveness 
 
-- Website should be fully **responsive for mobile devices** (implementation up to you)
+- Website is fully **responsive for mobile devices** (implementation up to you)
 
 ---
 
@@ -87,10 +80,10 @@ This Section will have layout as figma
 ### 5. Call Buttons
 
 - On clicking a card's **Call Button**, following actions will happen:
-  - Show an **alert** with a message including the service name and number
+  - An **alert** will appear with a message including the service name and number
   - Each call will **cut 20 coins**. Reduce Coin after each click.
-  - If coins are less than 20, show a relevant alert and terminate the process.
-  - Add this service into the **Call History section** with:
+  - If coins are less than 20, An alert will appear with message and terminate the process.
+  - The  service will be added  into the **Call History section** with:
     - Service name
     - Service number
 
@@ -98,44 +91,73 @@ This Section will have layout as figma
 
 ### 5. Call History Section
 
-- Show all called services with name & number. This will empty initially. when call button clicked it will filled dynamically.
+-  All called services will appear with name & number. This will empty initially. when call button clicked it will filled dynamically.
 - A **Clear History button** on the right
 - Clicking this button will remove all data from call history
 
 ---
 
-## Create Readme
 
-You have to create a `Readme.md` file. and write down following questions. Dont Try to copy paste from AI Tools. Just write what you know about these. If you don't know , then search , learn , understand and then write.
 
-### 6. Answer the following questions clearly:
+### 6. Answers of  the following questions :
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
-2. How do you **create and insert a new element into the DOM**?
-3. What is **Event Bubbling** and how does it work?
-4. What is **Event Delegation** in JavaScript? Why is it useful?
-5. What is the difference between **preventDefault() and stopPropagation()** methods?
+- Ans No1:
+      getElementById ---> returns a single element or null.Basically Used to find an element uniquely.
+      getElementsByClassname ---> returns a HTML collections (an array like object).
+      querySelector ---> returns a single element or null.basically its returns the first match. 
 
 ---
 
-## 🧪 Challenges Part (10 Marks)
+2. How do you **create and insert a new element into the DOM**?
+- Ans No2:
+     1.first i create a tag element which i need like p,div etc.
+     const element = document.createElement('p');
+     2.Then i will change the content nt innerText
+     const content = element.innerText;
+      content ="My name "; 
+     3.next append the tag
+     element.appendChild(content).
 
-- On clicking the **Copy button**, show an alert and **increase the copy count** (3 Marks)
+---
 
-- Hotline number will be **copied on click** so it can be pasted anywhere (4 Marks)
+3. What is **Event Bubbling** and how does it work?
+- Ans No3:
+ when we perform an event like onclick,keypress etc in an element and it go through its parent ,grandparent ,top most element  its called event bubbling.
 
-💡Hint: You can ask for Help from `ChatGPT` Mamma . Just copy the below prompt , generate answer. use it with your own way.
+ Its use  to manipulates parent nodes by a single event handler.
 
-```bash
-I have a card with some text and a button inside it. I want that when a user clicks the button, some specific text from the card is copied to the clipboard using JavaScript. Please provide the code and explain it step by step.
+ ---
+
+   
+4. What is **Event Delegation** in JavaScript? Why is it useful?
+-Ans No4:
+     Its a method by which we can handle a child element event by adding a event handler to its parent node .
+
+     its useful because there no need to add event all the elements rather than we use a single handler to parent and manipulates all the  elements.
+
+---
+
+5. What is the difference between **preventDefault() and stopPropagation()** methods?
+- Ans No5:
+     preventDefault()--> Use to prevent browser default actions 
+     stopPropagation() --> Use to prevent bubbling up event
+
+---
+
+## 🧪 Challenges Part 
+
+- By clicking the **Copy button**,  an alert will appear and **increase the copy count** 
+
+- Hotline number will be **copied on click** so it can be pasted anywhere 
+
+
 ```
 
-- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section (3 Marks)
+- After clicking on the **Call button**, the **exact time of the call** will be shown in the Call History section 
 
-💡Hint: Search Google with that below question
 
-```bash
-How to get current local time in js
+ Local time in js implemented successfully.😎
 ```
 
 ---
@@ -143,23 +165,29 @@ How to get current local time in js
 ## ⚙️ Technology Stack
 
 - HTML
-- CSS ( Vanilla , Tailwind CSS , DaisyUI , Others - wheatever you like )
-- JavaScript ( Vanilla only. No Framework / Library Allowed )
+- CSS (  DaisyUI  is used)
+- JavaScript ( Vanilla only. No Framework / Library are used )
 
 ---
 
 ## 📌 Rules
 
-- ✅ Minimum **5 meaningful commits** required
-- ❌ No Lorem Ipsum or dummy placeholder text. Use **relevant content only**
+- ✅ More Than  **5 meaningful commits** are added.😎
+- ❌ No Lorem Ipsum or dummy placeholder text. are  Used **relevant content are used**
 
 ---
 
 ## 🔗 What to Submit
 
 - 📂 **GitHub Repository**
+    
+    https://github.com/ashrafulislam65/emergency-service-directory-website
+
 - 🌐 **Live Link**
+  
+   https://ashrafulislam65.github.io/emergency-service-directory-website/
 
 ---
 
-# Let's Code and Achieve your Dream 🎯
+# Rode to My Dream 🎯
+
