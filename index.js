@@ -61,8 +61,8 @@ const callButtons = document.querySelectorAll('.call-btn');
 for (let callBtn of callButtons) {
     callBtn.addEventListener('click', function (e) {
         e.preventDefault;
-        const serviceTitle = document.querySelector('.card-title').innerText;
-        const serviceNumber = document.querySelector('.service-number').innerText;
+        const serviceTitle = this.closest('.card-body').querySelector('.card-title').innerText;
+        const serviceNumber = this.closest('.card-body').querySelector('.service-number').innerText;
         const date = new Date().toLocaleTimeString();
         if (parseInt(document.getElementById('coins').innerText) < 20) {
             return alert('Insufficient coins to make a call.At least 20 coins are required to make a call.');
@@ -90,18 +90,18 @@ document.getElementById('clear-btn').addEventListener('click', function (e) {
     document.getElementById('call-histories').innerText = '';
 });
 // copy button handler
- // Copy to clipboard function
+
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
-        // Success - do nothing extra
+       
     }).catch(err => {
         console.error('Failed to copy: ', err);
-        // Fallback for older browsers
+       
         const textArea = document.createElement("textarea");
         textArea.value = text;
         document.body.appendChild(textArea);
         textArea.select();
-        //document.execCommand("copy");
+        
         document.body.removeChild(textArea);
     });
 }
@@ -112,22 +112,22 @@ for(let copyBtn of copyBtns){
     copyBtn.addEventListener('click', function(e){
         e.preventDefault();
         
-        // Show alert
-        alert(`Number copied to clipboard! ${document.querySelector('.service-number').innerText}`);
         
-        // Update copy count
+        alert(`Number copied to clipboard! ${this.closest('.card-body').querySelector('.service-number').innerText}`);
+        
+        
         const copyAmount = parseInt(document.getElementById('copy-count').innerText);
         const updateCopyAmount = copyAmount + 1;
         document.getElementById('copy-count').innerText = updateCopyAmount;
         
-        // Copy service number to clipboard
-        const serviceNumber = document.querySelector('.service-number').innerText;
+        
+        const serviceNumber = this.closest('.card-body').querySelector('.service-number').innerText;
         copyToClipboard(serviceNumber);
         
-        // Visual feedback
+        
         this.classList.add('copied');
         const originalHtml = this.innerHTML;
-        //this.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        
         setTimeout(() => {
             this.innerHTML = originalHtml;
             this.classList.remove('copied');
