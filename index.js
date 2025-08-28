@@ -84,3 +84,8 @@ for (let callBtn of callButtons) {
         callHistories.appendChild(newHistory);
     });
 }
+// clear history
+document.getElementById('clear-btn').addEventListener('click', function (e) {
+    e.preventDefault;
+    document.getElementById('call-histories').innerText = '';
+});
